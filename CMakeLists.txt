@@ -3,8 +3,11 @@ project(Filter)
 
 #should maybe check whether chosen compiler supports c++11
 
+# compilation database
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 if(UNIX)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -std=c++11")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -std=c++11 -g")
 endif(UNIX)
 
 set(CMAKE_DEBUG_POSTFIX "d")
